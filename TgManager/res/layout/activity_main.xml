@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="black.jack.tgmanager.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/lyapi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/spnapi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50" />
+
+        <Button
+            android:id="@+id/btndelapi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".50"
+            android:drawableRight="@android:drawable/ic_delete"
+            android:text="حذف ربات" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnSend"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@android:drawable/ic_menu_send"
+        android:text="ارسال" />
+
+    <CheckBox
+        android:id="@+id/chkmute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSend"
+        android:layout_alignParentLeft="true"
+        android:text="ارسال بیصدا" />
+
+    <EditText
+        android:id="@+id/txtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chkmute"
+        android:layout_alignLeft="@+id/chkmute"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lyttools"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/chkwv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtText"
+        android:layout_below="@+id/txtText"
+        android:text="نمایش صفحه وب" />
+
+    <Spinner
+        android:id="@+id/spnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyapi"
+        android:layout_toLeftOf="@+id/btndelid"
+        android:layout_weight="0.50" />
+
+    <Button
+        android:id="@+id/btndelid"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/lyapi"
+        android:layout_alignTop="@+id/spnid"
+        android:layout_marginTop="5dp"
+        android:layout_weight=".50"
+        android:drawableRight="@android:drawable/ic_delete"
+        android:text="حذف گیرنده" />
+
+    <LinearLayout
+        android:id="@+id/lyttools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btndelid"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnbold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="ضخیم"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnitalic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="کج"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnhyper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="هایپر" />
+
+        <Button
+            android:id="@+id/btnpre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:text="حاشیه" />
+    </LinearLayout>
+
+</RelativeLayout>
